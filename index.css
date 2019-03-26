@@ -1,0 +1,16 @@
+body {
+  margin:0;
+  height: 100%;
+  overflow: hidden;
+  overflow-x: hidden;
+}
+
+.cave-image {
+  display:block;
+  width: 150%;
+  height: 150%;
+  object-fit: cover;
+  position: absolute;
+  left: -25%;
+  top: -25%;
+}
