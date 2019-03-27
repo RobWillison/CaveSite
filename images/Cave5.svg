@@ -7,13 +7,10 @@
 	.st1{fill:#507B82;}
 	.st2{fill:#C6DFDE;}
 </style>
-<defs>
-  <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
-    <stop offset="0%" style="stop-color:#719EA0;stop-opacity:1" />
-    <stop offset="100%" style="stop-color:#507B82;stop-opacity:1" />
-  </linearGradient>
-</defs>
-<rect fill="url(#grad1)"  width="2796.94" height="3120.78"/>
-<!-- <ellipse class="st1" cx="1398.47" cy="2503.52" rx="993.26" ry="397.06"/> -->
-<ellipse class="st2" cx="1398.47" cy="711.82" rx="993.26" ry="374.55"/>
+<filter id="blurMe">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="35" />
+  </filter>
+<rect class="st0" width="2796.94" height="3120.78"/>
+<ellipse class="st1" opacity="0.19" cx="1398.47" cy="2503.52" rx="993.26" ry="397.06" filter="url(#blurMe)"/>
+<ellipse class="st2" opacity="0.23" cx="1398.47" cy="711.82" rx="993.26" ry="374.55" filter="url(#blurMe)"/>
 </svg>
