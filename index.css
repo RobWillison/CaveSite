@@ -6,11 +6,5 @@ body {
 }
 
 .cave-image {
-  display:block;
-  width: 150%;
-  height: 150%;
-  object-fit: cover;
-  position: absolute;
-  left: -25%;
-  top: -25%;
+  display:none;
 }
