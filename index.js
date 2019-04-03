@@ -21,7 +21,8 @@ $( document ).ready(function() {
       newY = y * data.r
 
       $(el).css('-webkit-transform','translate('+newX+'px,'+newY+'px)');
-      // $(el).css('transform','rotate(95deg)');
+      $(el).css('transform','translate('+newX+'px,'+newY+'px)');
+      $(el).css('-ms-transform','translate('+newX+'px,'+newY+'px)');
     })
   }
 
