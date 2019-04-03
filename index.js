@@ -14,13 +14,14 @@ $( document ).ready(function() {
     if (y > window.maxY){
       y = window.maxY
     }
-    console.log(x, y)
+
     $('.move').each(function(i, el) {
       data = $(el).data()
-      newX = data.origin.left + x * data.r
-      newY = data.origin.top + y * data.r
+      newX = x * data.r
+      newY = y * data.r
 
-      $(el).css({top: newY + 'px', left: newX + 'px' })
+      $(el).css('-webkit-transform','translate('+newX+'px,'+newY+'px)');
+      // $(el).css('transform','rotate(95deg)');
     })
   }
 
@@ -28,6 +29,7 @@ $( document ).ready(function() {
   $('.move').each(function(i, el) {
     $(el).data('origin', $(el).position())
   })
+
   window.maxX = -$('#outer').data('origin').left
   window.maxY = -$('#outer').data('origin').top
 
@@ -37,7 +39,6 @@ $( document ).ready(function() {
   })
 
   window.addEventListener("deviceorientation", function () {
-        console.log(event.gamma, event.beta)
         window.targetX = event.gamma*10
         window.targetY = event.beta*10
     }, true)
